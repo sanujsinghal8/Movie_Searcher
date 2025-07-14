@@ -51,12 +51,10 @@ async function searchMovies() {
   }
 }
 
-// Search on Enter key
 searchInput.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') searchMovies();
 });
 
-// Toggle Light/Dark theme
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('light');
   toggleBtn.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';

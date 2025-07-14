@@ -1,0 +1,131 @@
+:root {
+    --bg: #121212;
+    --text: #ffffff;
+    --card-bg: #1e1e1e;
+    --button: #e50914;
+    --button-hover: #ff2e2e;
+  }
+  
+  body.light {
+    --bg: #f2f2f2;
+    --text: #000;
+    --card-bg: #ffffff;
+    --button: #007bff;
+    --button-hover: #0056b3;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  #toggleTheme {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  input {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: var(--button);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .movie-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+  }
+  
+  .movie-info {
+    padding: 15px;
+  }
+  
+  .movie-info h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+  }
+  
+  .movie-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ccc;
+  }
+  
+  .loader {
+    margin: 30px auto;
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ccc;
+    border-top: 5px solid var(--button);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
